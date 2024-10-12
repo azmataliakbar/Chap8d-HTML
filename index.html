@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Example</title>
+    <style>
+        /* CSS for overall layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            margin-left: 0px;
+            margin-right: 10px;
+            background-color: #f4f4f4; /* Add a background color */
+        }
+        
+        /* Navigation bar styles */
+        .nav-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            background-color: rgb(0, 191, 255);
+            width: 100%; /* Full width */
+            height: 70px; /* Fixed height */
+            position: fixed; /* Fix position at the top */
+            top: 0;
+            right: 15px;
+            left: 0px; /* Align to the left */
+            border-radius: 0 0 15px 15px;
+            z-index: 500;
+            padding: 5px 20px; /* Add horizontal padding */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        
+        .nav-text {
+            display: flex; /* Use flex for horizontal alignment */
+            justify-content: center; /* Center links */
+            width: 100%; /* Take full width */
+            gap: 150px;
+        }
+
+        .nav-text a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px; /* Horizontal spacing between links */
+            font-size: 16px; /* Adjusted font size for better responsiveness */
+            font-weight: bold;
+            
+        }
+        .nav-text a:hover {
+            color: white; 
+        }
+        
+        /* Content area styles */
+        .content {
+    display: flex;
+    justify-content: flex-end; /* Align items to the end to move the image to the right */
+    align-items: center; /* Vertically center the image and text */
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 55px;
+    border-radius: 15px;
+    gap: 10px; /* Reduce the gap between the image and text */
+}
+
+.content img {
+    order: 1; /* Ensure the image appears on the right side */
+    border-radius: 15px;
+    max-width: 50%; /* Adjust the size as needed */
+    margin-left: 250px;
+    margin-bottom: 0px;
+    padding-bottom: 0%;
+}
+
+.content p {
+    order: 2; /* Ensure the text appears on the left side */
+    max-width: 45%; /* Adjust the size as needed */
+    text-align: left;
+    margin-right: 250px;
+}
+
+        /* Footer styles */
+        footer {
+            background-color: rgb(0, 191, 255); /* Light blue */
+            text-align: center;
+            padding: 5px;
+            position: relative; /* Adjust positioning */
+            width: 100%; /* Full width */
+            margin-top: 20px; /* Space above footer */
+            border-radius: 15px 15px 0 0; /* Rounded border at the top */
+        }
+        footer:hover {
+            color: white;
+        }
+
+.sidebar-image {
+    width: 100px;
+    height: 50px;
+    margin-right: 20px; /* Adjust spacing as needed */
+    margin-left: 20px;
+    border-radius: 10%;
+    object-fit: cover; /* Ensure the image keeps its aspect ratio */
+    
+}
+.link{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+a {
+      color: rgb(246, 132, 151);
+      
+    }
+    a:hover {
+      color: blue;
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 100px;
+      text-align: center;
+      text-shadow: 0px 5px 15px rgb(74, 73, 73);
+    }
+    h6 {
+      text-align: center;
+      color: rgb(167, 164, 164);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+            .nav-text a {
+                font-size: 14px; /* Smaller font size for mobile */
+                margin: 0 10px; /* Reduced spacing for mobile */
+            }
+
+            .content {
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the image and text horizontally */
+    margin-top: 20px;
+    gap: 15px; /* Increase gap slightly for readability */
+  }
+
+  .content img {
+    max-width: 100%; /* Reduce the image size for smaller screens */
+    max-height: 200px;
+    margin-left: 0px; /* Remove large margin */
+  }
+
+  .content p {
+    max-width: 100%; /* Allow the text to take up more space */
+    text-align: justify; /* Center text for smaller screens */
+    margin-right: 0px; /* Remove large margin */
+  }
+
+            footer {
+                padding: 5px; /* Less padding for mobile */
+            }
+            h1 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 100px;
+                text-align: center;
+                text-shadow: 0px 5px 15px rgb(74, 73, 73);
+                }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column; /* Stack nav items vertically */
+                height: auto; /* Allow height to adjust */
+            }
+
+            .nav-text {
+                flex-direction: row; /* Stack nav items vertically */
+                align-items: center; /* Center items */
+                gap: 20px;
+            }
+
+            .nav-text a {
+                margin: 5px 0; /* Vertical spacing for mobile */
+            }
+
+            .link {
+                margin-bottom: 20px; /* Adjust margin for link */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+      
+      <img src="pana1.png" alt="Your Image" class="sidebar-image">
+
+      <div class="nav-text">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+
+      </div>
+
+    </div>
+    <h1><u>Understand the portfolio!</u></h1>
+    <!-- Main Content -->
+    <div class="content">
+
+      
+      <img src="robert1.png" alt="Laptop with an additional keyboard" width="400" height="300">
+      <p>
+        <b>Why it's special:</b> A portfolio is special because it showcases your skills, achievements, and projects, serving as a visual resume that highlights your expertise. It's a powerful tool to leave a lasting impression on potential clients, employers, or collaborators. <br>
+        
+        <b>What it's about:</b> A portfolio is about presenting your best work in a structured and engaging way, demonstrating your abilities, creativity, and experience. It typically includes samples of completed projects, case studies, personal statements, and testimonials. It helps others understand your style, proficiency, and the value you bring. Whether you're an artist, developer, designer, or writer, a portfolio acts as your professional showcase. It's an essential way to build credibility and attract opportunities.</p>
+    </div>
+
+    <div class="content">
+
+    <img src="michele1.png" alt="Laptop with an additional keyboard" width="400" height="300">
+    <p>
+      <b>Why it's special:</b> A portfolio is special because it showcases your skills, achievements, and projects, serving as a visual resume that highlights your expertise. It's a powerful tool to leave a lasting impression on potential clients, employers, or collaborators. <br>
+      
+      <b>What it's about:</b> A portfolio is about presenting your best work in a structured and engaging way, demonstrating your abilities, creativity, and experience. It typically includes samples of completed projects, case studies, personal statements, and testimonials. It helps others understand your style, proficiency, and the value you bring. Whether you're an artist, developer, designer, or writer, a portfolio acts as your professional showcase. It's an essential way to build credibility and attract opportunities.</p>
+
+    </div>
+    <div class="link">
+      <a href="https://github.com/Ameen-Alam/PIAIC-HTML-CSS-Assignments/?tab=readme-ov-file">GitHub/GIAIC-HTML-CSS-Assignments</a>
+    </div>
+    <h6><i>Author: Azmat Ali</i></h6>
+    <!-- Footer -->
+    <div>
+      <footer>
+        Copyright <sup>&copy;</sup> 2024 All rights reserved  <!-- <sup>&reg;</sup>  -->
+    </footer>
+    </div>
+    
+</body>
+</html>
